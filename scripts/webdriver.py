@@ -16,6 +16,7 @@ def go(url):
     chrome_options = Options()
     chrome_options.add_argument('--proxy-server=%s' % config()['webdriver']['proxy'])
     chrome_options.add_argument('--headless')
+    chrome_options.add_argument('--ignore-certificate-errors')
 
     proxy = Proxy()
     proxy.proxy_type = ProxyType.MANUAL
